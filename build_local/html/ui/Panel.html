@@ -1,0 +1,357 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+
+    <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-197011172-4', 'auto');
+    ga('send', 'pageview');
+    </script>
+    <!-- End Google Analytics -->
+
+
+  <title>Panel &mdash; BOSS  documentation</title>
+  
+
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Button" href="Button.html" />
+    <link rel="prev" title="Comparisons" href="../getting_started/Comparisons.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> BOSS
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/Installation.html">Download/Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/ui_creator.html">ui_creator.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/Launchers.html">Launchers (Quick Run)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/Comparisons.html">Comparisons</a></li>
+</ul>
+<p class="caption"><span class="caption-text">UI</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Panel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Button.html">Button</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CheckBox.html">CheckBox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextField.html">TextField</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IntField.html">IntField</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FloatField.html">FloatField</a></li>
+<li class="toctree-l1"><a class="reference internal" href="VectorFields.html">VectorFields</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Classes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../classes/Boss_OT_base_ui.html">Boss_OT_base_ui</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../classes/Geo.html">Geo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../classes/RectData.html">RectData</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../classes/Text.html">Text</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Misc</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../misc/Events_And_Callbacks.html">Events and Callbacks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/Errors.html">Errors</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Future Updates</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../future_updates/Future_Updates.html">Future updates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../future_updates/Images.html">Images</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BOSS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Panel</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/ui/Panel.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="panel">
+<span id="panel-title"></span><h1>Panel<a class="headerlink" href="#panel" title="Permalink to this headline">¶</a></h1>
+<p>It’s a class</p>
+<p>This is the most basic UI that can be created. Its so basic that you can’t interact with it, meaning, you can’t add any kind of event to it.</p>
+<p>Panel defines how any UI Element looks. It’s color, image, text, shape and size etc.</p>
+<p>A Simple rectangle with default settings can be created using following code.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">boss.ui_creator</span> <span class="kn">import</span> <span class="n">UICreator</span>
+
+<span class="k">def</span> <span class="nf">ui_elements</span><span class="p">(</span><span class="n">op</span><span class="p">):</span>
+    <span class="n">UICreator</span><span class="o">.</span><span class="n">panel</span><span class="p">(</span><span class="n">op</span><span class="p">,</span> <span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">100</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>A Panel with more parameter look like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">boss.ui_creator</span> <span class="kn">import</span> <span class="n">UICreator</span>
+<span class="k">def</span> <span class="nf">ui_elements</span><span class="p">(</span><span class="n">op</span><span class="p">):</span>
+    <span class="n">UICreator</span><span class="o">.</span><span class="n">panel</span><span class="p">(</span>
+        <span class="n">op</span><span class="o">=</span><span class="n">op</span><span class="p">,</span>
+        <span class="n">rectData</span><span class="o">=</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">100</span><span class="p">),</span>
+        <span class="n">text</span><span class="o">=</span><span class="s1">&#39;Panel Text&#39;</span><span class="p">,</span>
+        <span class="n">ttt</span> <span class="o">=</span> <span class="s1">&#39;ToolTip Text&#39;</span><span class="p">,</span>
+        <span class="n">tti</span> <span class="o">=</span> <span class="s1">&#39;ToolTip Image&#39;</span><span class="p">,</span>
+        <span class="n">canDrag</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+        <span class="n">parent</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+        <span class="n">param</span><span class="o">=</span><span class="s1">&#39;This can any python object&#39;</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+<p class="rubric" id="panel-parameters">Parameters</p>
+<ul>
+<li><dl>
+<dt>op:</dt><dd><p>type: <a class="reference internal" href="../classes/Boss_OT_base_ui.html#boss-ot-base-ui-title"><span class="std std-ref">Boss_OT_base_ui</span></a></p>
+<p>It’s reference of the operator, inherited from Boss_OT_base_ui</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>rectData:</dt><dd><p>type: <a class="reference internal" href="../classes/RectData.html#rectdata-title"><span class="std std-ref">RectData</span></a></p>
+<p>Rectangle of the panel.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>text:</dt><dd><p>type:str</p>
+<p>It’s label</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>ttt:</dt><dd><dl class="simple">
+<dt>possible parameter types:</dt><dd><ul class="simple">
+<li><p>str: eg. ‘this is tooltip’</p></li>
+<li><p>list of str: eg. [‘this is tooltip’,’this is also tooltip’]</p></li>
+<li><p>func (callable): any function that returns str or list of str.</p></li>
+</ul>
+</dd>
+</dl>
+<p>tooltip text</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>tti:</dt><dd><dl class="simple">
+<dt>possible parameter types:</dt><dd><ul class="simple">
+<li><p>str: representing path of an image.</p></li>
+<li><p>func (callable): any function that returns str as path of an image.</p></li>
+</ul>
+</dd>
+</dl>
+<p>tooltip image path, it should be full path, not relative path.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>canDrag:</dt><dd><p>type: bool</p>
+<p>True if UI is draggable.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>parent:</dt><dd><p>type: <a class="reference internal" href="#panel-title"><span class="std std-ref">Panel</span></a> or <a class="reference internal" href="Button.html#button-title"><span class="std std-ref">Button</span></a></p>
+<p>This panel will be child of passed parameter.</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>param:</dt><dd><p>type: any python object</p>
+<p>This is optional parameter that can be passed.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>A Panel object is not very useful on its own. Its base class of <a class="reference internal" href="Button.html#button-title"><span class="std std-ref">Button</span></a>, which completes it by
+making it intractable. Since Button adds more functionality to Panel, Panel’s properties will be discussed along with
+Button class, read about that <a class="reference internal" href="Button.html#button-title"><span class="std std-ref">Button</span></a>.</p>
+<p class="rubric">Footnotes</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">canDrag</span></code> property is defined in Panel, but create <a class="reference internal" href="Button.html#button-title"><span class="std std-ref">Button</span></a> Object to make it draggable.</p></li>
+<li><p><strong>Ques.</strong> If Panel is so useless, Shouldn’t always <a class="reference internal" href="Button.html#button-title"><span class="std std-ref">Button</span></a> be created?
+Ans. Yes, but Panel is good for Labels(text or Image),Image_tooltip is shown using Panel. If you decided to use some
+non-visible helper ui component, Panel can be used.</p></li>
+</ol>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="Button.html" class="btn btn-neutral float-right" title="Button" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../getting_started/Comparisons.html" class="btn btn-neutral float-left" title="Comparisons" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, bboss99.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

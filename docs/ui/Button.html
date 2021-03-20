@@ -1,0 +1,621 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+
+    <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-197011172-4', 'auto');
+    ga('send', 'pageview');
+    </script>
+    <!-- End Google Analytics -->
+
+
+  <title>Button &mdash; BOSS  documentation</title>
+  
+
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="CheckBox" href="CheckBox.html" />
+    <link rel="prev" title="Panel" href="Panel.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> BOSS
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/Installation.html">Download/Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/ui_creator.html">ui_creator.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/Launchers.html">Launchers (Quick Run)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/Comparisons.html">Comparisons</a></li>
+</ul>
+<p class="caption"><span class="caption-text">UI</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Panel.html">Panel</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Button</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#buttondata">ButtonData</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CheckBox.html">CheckBox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="TextField.html">TextField</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IntField.html">IntField</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FloatField.html">FloatField</a></li>
+<li class="toctree-l1"><a class="reference internal" href="VectorFields.html">VectorFields</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Classes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../classes/Boss_OT_base_ui.html">Boss_OT_base_ui</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../classes/Geo.html">Geo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../classes/RectData.html">RectData</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../classes/Text.html">Text</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Misc</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../misc/Events_And_Callbacks.html">Events and Callbacks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/Errors.html">Errors</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Future Updates</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../future_updates/Future_Updates.html">Future updates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../future_updates/Images.html">Images</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BOSS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Button</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/ui/Button.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="button">
+<span id="button-title"></span><h1>Button<a class="headerlink" href="#button" title="Permalink to this headline">¶</a></h1>
+<p>It’s a class.</p>
+<p>Button is the most important <em>complete</em> UI that can be created. <em>Complete</em> ,
+means all other UI types are created using Button only, either by inheritance or by creating it’s instance.</p>
+<p>Therefore, TextField, IntField, CheckBox etc are all child of Button or have Button instance.
+Their Vector counterpart eg. VectorIntField has three Button instances.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This page and <a class="reference internal" href="../misc/Events_And_Callbacks.html#events-and-callbacks-title"><span class="std std-ref">Event and Callback</span></a> are very important, read carefully with patience</p>
+</div>
+<p>Simplest button requires two non-optional parameter:</p>
+<ul>
+<li><dl>
+<dt>op:</dt><dd><p>type: <a class="reference internal" href="../classes/Boss_OT_base_ui.html#boss-ot-base-ui-title"><span class="std std-ref">Boss_OT_base_ui</span></a></p>
+<p>It’s reference of the operator, inherited from Boss_OT_base_ui</p>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt>rectData:</dt><dd><p>type: <a class="reference internal" href="../classes/RectData.html#rectdata-title"><span class="std std-ref">RectData</span></a></p>
+<p>Rectangle of the panel.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">boss.ui_creator</span> <span class="kn">import</span> <span class="n">UICreator</span><span class="p">,</span><span class="n">RectData</span> <span class="c1">#,Button</span>
+
+<span class="k">def</span> <span class="nf">ui_elements</span><span class="p">(</span><span class="n">op</span><span class="p">):</span>
+    <span class="c1"># Button(op, RectData(10,10,100,50))</span>
+    <span class="c1"># or</span>
+    <span class="n">UICreator</span><span class="o">.</span><span class="n">button</span><span class="p">(</span><span class="n">op</span><span class="p">,</span><span class="n">RectData</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">50</span><span class="p">))</span>
+
+</pre></div>
+</td></tr></table></div>
+<p class="rubric">Default behaviour:</p>
+<ul class="simple">
+<li><p>By default button is draggable.</p></li>
+<li><p>By default button can’t be dragged outside the view region.</p></li>
+<li><p>By default button adds callback to change color <code class="docutils literal notranslate"><span class="pre">onEnter</span></code> and <code class="docutils literal notranslate"><span class="pre">onExit</span></code>.</p></li>
+</ul>
+<p>Above code does nothing when clicked, a more usable Button can be created using following code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">boss.ui_creator</span> <span class="kn">import</span> <span class="n">UICreator</span><span class="p">,</span> <span class="n">Boss_OT_base_ui</span>
+
+<span class="k">def</span> <span class="nf">createCube</span><span class="p">():</span>
+    <span class="kn">import</span> <span class="nn">bpy</span>
+    <span class="n">bpy</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">primitive_cube_add</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">ui_elements</span><span class="p">(</span><span class="n">op</span><span class="p">:</span><span class="n">Boss_OT_base_ui</span><span class="p">):</span>
+    <span class="n">UICreator</span><span class="o">.</span><span class="n">button</span><span class="p">(</span><span class="n">op</span><span class="p">,</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="s1">&#39;Cube&#39;</span><span class="p">,</span> <span class="n">createCube</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Above code Creates a Button near bottom left, when clicked, a Cube is created.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">boss.ui_creator</span> <span class="kn">import</span> <span class="n">UICreator</span>
+
+<span class="k">def</span> <span class="nf">ui_elements</span><span class="p">(</span><span class="n">op</span><span class="p">):</span>
+    <span class="n">UICreator</span><span class="o">.</span><span class="n">button</span><span class="p">(</span><span class="n">op</span><span class="p">,</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span> <span class="s1">&#39;Cube&#39;</span><span class="p">,</span>
+                     <span class="k">lambda</span> <span class="p">:</span> <span class="n">exec</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">((</span><span class="s1">&#39;import bpy&#39;</span><span class="p">,</span><span class="s2">&quot;bpy.ops.mesh.primitive_cube_add(size=2)&quot;</span><span class="p">))))</span>
+</pre></div>
+</div>
+<p>Above code does the same but uses lambda function. This way you can create several buttons without explicitly
+defining function.</p>
+<p class="rubric">Here is how a button will look with all the supported parameters</p>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">boss.ui_creator</span> <span class="kn">import</span> <span class="n">UICreator</span><span class="p">,</span> <span class="n">Boss_OT_base_ui</span><span class="p">,</span> <span class="n">ButtonData</span><span class="p">,</span> <span class="n">RectData</span>
+
+
+<span class="k">def</span> <span class="nf">onClicked</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Button is Clicked&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">dragging</span><span class="p">(</span><span class="n">some_param</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">some_param</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">onWheel</span><span class="p">(</span><span class="n">caller</span><span class="p">,</span> <span class="n">addby</span><span class="p">):</span>
+    <span class="n">caller</span><span class="o">.</span><span class="n">param</span> <span class="o">+=</span> <span class="n">addby</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;param is now&#39;</span><span class="p">,</span> <span class="n">caller</span><span class="o">.</span><span class="n">param</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">ui_elements</span><span class="p">(</span><span class="n">op</span><span class="p">:</span> <span class="n">Boss_OT_base_ui</span><span class="p">):</span>
+    <span class="n">UICreator</span><span class="o">.</span><span class="n">button</span><span class="p">(</span>
+        <span class="n">op</span><span class="o">=</span><span class="n">op</span><span class="p">,</span>
+        <span class="n">rectData</span><span class="o">=</span><span class="n">RectData</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span>
+        <span class="n">text</span><span class="o">=</span><span class="s1">&#39;ButtonText&#39;</span><span class="p">,</span>
+        <span class="n">buttonData</span><span class="o">=</span><span class="n">ButtonData</span><span class="p">(</span>
+            <span class="n">onClick</span><span class="o">=</span><span class="n">onClicked</span><span class="p">,</span>
+            <span class="n">onMouseEnter</span><span class="o">=</span><span class="k">lambda</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;mouse entered&#39;</span><span class="p">),</span>
+            <span class="n">onMouseExit</span><span class="o">=</span><span class="k">lambda</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;mouse exited&#39;</span><span class="p">),</span>
+            <span class="n">onWheelUp</span><span class="o">=</span><span class="p">(</span><span class="n">onWheel</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+            <span class="n">onWheelDown</span><span class="o">=</span><span class="p">(</span><span class="n">onWheel</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span>
+            <span class="n">onDragBegin</span><span class="o">=</span><span class="p">(</span><span class="n">dragging</span><span class="p">,</span> <span class="s1">&#39;dragging is started&#39;</span><span class="p">),</span>
+            <span class="n">onDrag</span><span class="o">=</span><span class="p">(</span><span class="n">dragging</span><span class="p">,</span> <span class="s2">&quot;it&#39;s being dragged&quot;</span><span class="p">),</span>
+            <span class="n">onDragEnd</span><span class="o">=</span><span class="p">(</span><span class="n">dragging</span><span class="p">,</span> <span class="s1">&#39;dragging is ended&#39;</span><span class="p">)</span>
+        <span class="p">),</span>
+        <span class="n">ttt</span><span class="o">=</span><span class="s1">&#39;tool tip text&#39;</span><span class="p">,</span>
+        <span class="n">tti</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+        <span class="n">canDrag</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">parent</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">rectIsLocal</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">param</span><span class="o">=</span><span class="mi">100</span>
+    <span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+<ul class="simple">
+<li><p>You can think of Button as, <strong>Button = It’s Shape and Size + Interectivity</strong>, where Shape and Size is
+defined by the parameters that are part of creating a <a class="reference internal" href="Panel.html#panel-title"><span class="std std-ref">Panel</span></a> and Interactivity is
+provided using <code class="docutils literal notranslate"><span class="pre">ButtonData</span></code> object.</p></li>
+<li><p>So, Button inherits from Panel, and <a class="reference internal" href="#buttondata-title"><span class="std std-ref">ButtonData</span></a> is only extra parameter that is required.
+You can compare <a class="reference internal" href="Panel.html#panel-parameters"><span class="std std-ref">Panel Parameters</span></a> with above code and see the
+<a class="reference internal" href="#buttondata-title"><span class="std std-ref">ButtonData</span></a> is the extra parameter.</p></li>
+</ul>
+<div class="section" id="buttondata">
+<span id="buttondata-title"></span><h2>ButtonData<a class="headerlink" href="#buttondata" title="Permalink to this headline">¶</a></h2>
+<p>It’s a class.</p>
+<p>This class object is used to pass <a class="reference internal" href="../misc/Events_And_Callbacks.html#events-and-callbacks-title"><span class="std std-ref">callback function</span></a> for button events.</p>
+<p>This is part of the above code, that first creates ButtonData object, then uses this <em>buttonData</em> to create Button.</p>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">boss.ui_creator</span> <span class="kn">import</span> <span class="n">UICreator</span><span class="p">,</span> <span class="n">Boss_OT_base_ui</span><span class="p">,</span> <span class="n">ButtonData</span><span class="p">,</span> <span class="n">RectData</span>
+
+
+<span class="k">def</span> <span class="nf">createCube</span><span class="p">():</span>
+    <span class="kn">import</span> <span class="nn">bpy</span>
+    <span class="n">bpy</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">primitive_cube_add</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">onClicked</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Button is Clicked&#39;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">dragging</span><span class="p">(</span><span class="n">some_param</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">some_param</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">onWheel</span><span class="p">(</span><span class="n">caller</span><span class="p">,</span> <span class="n">addby</span><span class="p">):</span>
+    <span class="n">caller</span><span class="o">.</span><span class="n">param</span> <span class="o">+=</span> <span class="n">addby</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;param is now&#39;</span><span class="p">,</span> <span class="n">caller</span><span class="o">.</span><span class="n">param</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">ui_elements</span><span class="p">(</span><span class="n">op</span><span class="p">:</span> <span class="n">Boss_OT_base_ui</span><span class="p">):</span>
+    <span class="n">buttonData</span> <span class="o">=</span> <span class="n">ButtonData</span><span class="p">(</span>
+        <span class="n">onClick</span><span class="o">=</span><span class="n">onClicked</span><span class="p">,</span>
+        <span class="n">onMouseEnter</span><span class="o">=</span><span class="k">lambda</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;mouse entered&#39;</span><span class="p">),</span>
+        <span class="n">onMouseExit</span><span class="o">=</span><span class="k">lambda</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;mouse exited&#39;</span><span class="p">),</span>
+        <span class="n">onWheelUp</span><span class="o">=</span><span class="p">(</span><span class="n">onWheel</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+        <span class="n">onWheelDown</span><span class="o">=</span><span class="p">(</span><span class="n">onWheel</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">),</span>
+        <span class="n">onDragBegin</span><span class="o">=</span><span class="p">(</span><span class="n">dragging</span><span class="p">,</span> <span class="s1">&#39;dragging is started&#39;</span><span class="p">),</span>
+        <span class="n">onDrag</span><span class="o">=</span><span class="p">(</span><span class="n">dragging</span><span class="p">,</span> <span class="s2">&quot;it&#39;s being dragged&quot;</span><span class="p">),</span>
+        <span class="n">onDragEnd</span><span class="o">=</span><span class="p">(</span><span class="n">dragging</span><span class="p">,</span> <span class="s1">&#39;dragging is ended&#39;</span><span class="p">)</span>
+    <span class="p">)</span>
+    <span class="n">UICreator</span><span class="o">.</span><span class="n">button</span><span class="p">(</span>
+        <span class="n">op</span><span class="o">=</span><span class="n">op</span><span class="p">,</span>
+        <span class="n">rectData</span><span class="o">=</span><span class="n">RectData</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span>
+        <span class="n">text</span><span class="o">=</span><span class="s1">&#39;ButtonText 1&#39;</span><span class="p">,</span>
+        <span class="n">buttonData</span><span class="o">=</span><span class="n">buttonData</span><span class="p">,</span>
+        <span class="n">ttt</span><span class="o">=</span><span class="s1">&#39;tool tip text&#39;</span><span class="p">,</span>
+        <span class="n">param</span><span class="o">=</span><span class="mi">100</span>
+    <span class="p">)</span>
+    <span class="n">UICreator</span><span class="o">.</span><span class="n">button</span><span class="p">(</span>
+        <span class="n">op</span><span class="o">=</span><span class="n">op</span><span class="p">,</span>
+        <span class="n">rectData</span><span class="o">=</span><span class="n">RectData</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">210</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span>
+        <span class="n">text</span><span class="o">=</span><span class="s1">&#39;ButtonText 2&#39;</span><span class="p">,</span>
+        <span class="n">buttonData</span><span class="o">=</span><span class="n">buttonData</span><span class="p">,</span>
+        <span class="n">ttt</span><span class="o">=</span><span class="s1">&#39;tool tip text&#39;</span><span class="p">,</span>
+        <span class="n">param</span><span class="o">=</span><span class="mi">100</span>
+    <span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+<p>From the above code you can see, Several buttons can be created using same <em>buttonData</em>.</p>
+<p class="rubric">Notes:</p>
+<ul class="simple">
+<li><p>You can create buttons in a loop with the same buttonData, in different locations (using different RectData list).</p></li>
+<li><p>Button doesn’t store reference to buttonData.</p></li>
+<li><p>Obviously, You don’t need all the callbacks in one Button, this example is just for demonstration, add callback only
+for what you need.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You must have read <a class="reference internal" href="../misc/Events_And_Callbacks.html#events-and-callbacks-title"><span class="std std-ref">event and callbacks</span></a> by now.</p>
+</div>
+<p class="rubric">Button Events</p>
+<ul class="simple">
+<li><p>onClick         : called when button is clicked</p></li>
+<li><p>onHover         : onHover isn’t implemented.</p></li>
+<li><p>onMouseEnter    : when mouse entered the rect of button</p></li>
+<li><p>onMouseExit     : when mouse exited the rect of button</p></li>
+<li><p>onWheelUp       : mouse wheel (middle button) rolled up</p></li>
+<li><p>onWheelDown     : mouse wheel (middle button) rolled down.</p></li>
+<li><p>onDragBegin     : when mouse (LMB) is pressed.</p></li>
+<li><p>onDrag          : when mouse (LMB) move moves, being pressed.</p></li>
+<li><p>onDragEnd       : when mouse (LMB) if lifted</p></li>
+</ul>
+<p>Following code shows all the <code class="docutils literal notranslate"><span class="pre">add_eventName</span></code> method of Button object.</p>
+<div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">boss.ui_creator</span> <span class="kn">import</span> <span class="n">UICreator</span><span class="p">,</span> <span class="n">Boss_OT_base_ui</span><span class="p">,</span> <span class="n">RectData</span>
+
+
+<span class="k">def</span> <span class="nf">onClicked</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Button is Clicked&#39;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">dragging</span><span class="p">(</span><span class="n">some_param</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">some_param</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">onWheel</span><span class="p">(</span><span class="n">caller</span><span class="p">,</span> <span class="n">addby</span><span class="p">):</span>
+    <span class="n">caller</span><span class="o">.</span><span class="n">param</span> <span class="o">+=</span> <span class="n">addby</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;param is now&#39;</span><span class="p">,</span> <span class="n">caller</span><span class="o">.</span><span class="n">param</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">ui_elements</span><span class="p">(</span><span class="n">op</span><span class="p">:</span> <span class="n">Boss_OT_base_ui</span><span class="p">):</span>
+    <span class="n">button</span> <span class="o">=</span> <span class="n">UICreator</span><span class="o">.</span><span class="n">button</span><span class="p">(</span>
+        <span class="n">op</span><span class="o">=</span><span class="n">op</span><span class="p">,</span>
+        <span class="n">rectData</span><span class="o">=</span><span class="n">RectData</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">110</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span>
+        <span class="n">text</span><span class="o">=</span><span class="s1">&#39;ButtonText&#39;</span><span class="p">,</span>
+        <span class="n">buttonData</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+        <span class="n">ttt</span><span class="o">=</span><span class="s1">&#39;tool tip text&#39;</span><span class="p">,</span>
+        <span class="n">param</span><span class="o">=</span><span class="mi">100</span>
+    <span class="p">)</span>
+
+    <span class="n">button</span><span class="o">.</span><span class="n">add_onClick</span><span class="p">(</span><span class="n">onClicked</span><span class="p">)</span>
+    <span class="n">button</span><span class="o">.</span><span class="n">add_onMouseEnter</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;mouse entered&#39;</span><span class="p">))</span>
+    <span class="n">button</span><span class="o">.</span><span class="n">add_onMouseExit</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;mouse exited&#39;</span><span class="p">))</span>
+    <span class="n">button</span><span class="o">.</span><span class="n">add_onWheelUp</span><span class="p">((</span><span class="n">onWheel</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+    <span class="n">button</span><span class="o">.</span><span class="n">add_onWheelDown</span><span class="p">((</span><span class="n">onWheel</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+    <span class="n">button</span><span class="o">.</span><span class="n">add_onDragBegin</span><span class="p">((</span><span class="n">dragging</span><span class="p">,</span> <span class="s1">&#39;dragging is started&#39;</span><span class="p">))</span>
+    <span class="n">button</span><span class="o">.</span><span class="n">add_onDrag</span><span class="p">((</span><span class="n">dragging</span><span class="p">,</span> <span class="s2">&quot;it&#39;s being dragged&quot;</span><span class="p">))</span>
+    <span class="n">button</span><span class="o">.</span><span class="n">add_onDragEnd</span><span class="p">((</span><span class="n">dragging</span><span class="p">,</span> <span class="s1">&#39;dragging is ended&#39;</span><span class="p">))</span>
+</pre></div>
+</td></tr></table></div>
+<p class="rubric">Notes:</p>
+<ol class="arabic simple">
+<li><p>Every button added needs to be checked whether mouse cursor is within its rect. It happens whenever mouse moves.
+More buttons you add, more time it would take. Generally, 10 to 20 buttons, are required for creating any
+simple functionality.But, create 100,200 buttons is still doable. In future updates, as project will grow,
+there will be some way to accelerate this using trees, hashing, area partitioning etc.</p></li>
+<li><p>Since Panel isn’t interactive, it has very few uses. During development, a <code class="docutils literal notranslate"><span class="pre">Panel</span></code> was enough to be draggable
+and change it’s color. To keep all the interactivity and callbacks in one class, all code for callback was
+removed from <code class="docutils literal notranslate"><span class="pre">Panel</span></code> to <code class="docutils literal notranslate"><span class="pre">Button</span></code>. Now a Button is required to change <code class="docutils literal notranslate"><span class="pre">Panel</span></code> properties of <code class="docutils literal notranslate"><span class="pre">canDrag</span></code> and color.</p></li>
+<li><p><strong>What is Click?</strong> , If mouse is down and up in the same co-ordinate position, the up event becomes the click.
+If mouse moved, even by 1 px, when held down, its <strong>NOT</strong> a click. (its a Drag). Some times click doesn’t work,
+this could be the reason.</p></li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="CheckBox.html" class="btn btn-neutral float-right" title="CheckBox" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Panel.html" class="btn btn-neutral float-left" title="Panel" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, bboss99.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,470 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+
+    <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-197011172-4', 'auto');
+    ga('send', 'pageview');
+    </script>
+    <!-- End Google Analytics -->
+
+
+  <title>ui_creator.py &mdash; BOSS  documentation</title>
+  
+
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Launchers (Quick Run)" href="Launchers.html" />
+    <link rel="prev" title="Download/Installation" href="Installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> BOSS
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">Download/Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">ui_creator.py</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#convenience">Convenience</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#compatibility">Compatibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#conclusion">Conclusion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#uicreator-class">UICreator (class)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Launchers.html">Launchers (Quick Run)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Comparisons.html">Comparisons</a></li>
+</ul>
+<p class="caption"><span class="caption-text">UI</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../ui/Panel.html">Panel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ui/Button.html">Button</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ui/CheckBox.html">CheckBox</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ui/TextField.html">TextField</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ui/IntField.html">IntField</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ui/FloatField.html">FloatField</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ui/VectorFields.html">VectorFields</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Classes</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../classes/Boss_OT_base_ui.html">Boss_OT_base_ui</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../classes/Geo.html">Geo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../classes/RectData.html">RectData</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../classes/Text.html">Text</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Misc</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../misc/Events_And_Callbacks.html">Events and Callbacks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../misc/Errors.html">Errors</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Future Updates</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../future_updates/Future_Updates.html">Future updates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../future_updates/Images.html">Images</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BOSS</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>ui_creator.py</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/getting_started/ui_creator.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ui-creator-py">
+<span id="ui-creator-title"></span><h1>ui_creator.py<a class="headerlink" href="#ui-creator-py" title="Permalink to this headline">¶</a></h1>
+<p><code class="docutils literal notranslate"><span class="pre">ui_creator.py</span></code> is the only file/module you have to import to create UIs.</p>
+<p>This module has two purposes:</p>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="#convenience">Convenience</a></p></li>
+<li><p><a class="reference internal" href="#compatibility">Compatibility</a></p></li>
+</ol>
+<div class="section" id="convenience">
+<h2>Convenience<a class="headerlink" href="#convenience" title="Permalink to this headline">¶</a></h2>
+<p>This module presents a nice interface for user,
+and all the important classes
+and modules have already been imported in
+this module for convenience. This module also defines/wraps a lot of function
+so that you can find all important functions in one place.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">boss.operators.Boss_OT_base_ui</span> <span class="kn">import</span> <span class="n">Boss_OT_base_ui</span>
+<span class="kn">from</span> <span class="nn">boss.ui.base_ui.PanelData</span> <span class="kn">import</span> <span class="n">PanelData</span>
+<span class="kn">from</span> <span class="nn">boss.ui.Panel</span> <span class="kn">import</span> <span class="n">Panel</span>
+<span class="kn">from</span> <span class="nn">boss.ui.Button</span> <span class="kn">import</span> <span class="n">ButtonData</span><span class="p">,</span> <span class="n">Button</span>
+<span class="kn">from</span> <span class="nn">boss.Geo.RectData</span> <span class="kn">import</span> <span class="n">RectData</span>
+<span class="kn">from</span> <span class="nn">boss.Geo.RectGeo</span> <span class="kn">import</span> <span class="n">RectGeo</span><span class="p">,</span> <span class="n">RectGeoData</span>
+<span class="kn">from</span> <span class="nn">boss.Alignment</span> <span class="kn">import</span> <span class="n">Align</span>
+<span class="kn">from</span> <span class="nn">boss.Text</span> <span class="kn">import</span> <span class="n">TextData</span><span class="p">,</span> <span class="n">Text</span>
+<span class="kn">from</span> <span class="nn">boss.Color</span> <span class="kn">import</span> <span class="n">Color</span>
+<span class="kn">from</span> <span class="nn">boss.ui.CheckBox</span> <span class="kn">import</span> <span class="n">CheckBox</span>
+<span class="kn">from</span> <span class="nn">boss.ui.TextField</span> <span class="kn">import</span> <span class="n">TextField</span>
+<span class="kn">from</span> <span class="nn">boss.ui.IntField</span> <span class="kn">import</span> <span class="n">IntField</span>
+<span class="kn">from</span> <span class="nn">boss.ui.FloatField</span> <span class="kn">import</span> <span class="n">FloatField</span>
+<span class="kn">from</span> <span class="nn">boss.ui.VectorField</span> <span class="kn">import</span> <span class="n">VectorIntField</span><span class="p">,</span> <span class="n">VectorFloatField</span><span class="p">,</span> <span class="n">VectorBooleanField</span>
+<span class="kn">from</span> <span class="nn">boss.ui.ColorField</span> <span class="kn">import</span> <span class="n">ColorField</span>
+</pre></div>
+</div>
+<p>you can import only the things you need</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">boss.ui_creator</span> <span class="kn">import</span> <span class="n">Button</span><span class="p">,</span><span class="n">ButtonData</span><span class="p">,</span><span class="n">Panel</span><span class="p">,</span><span class="n">PanelData</span><span class="p">,</span><span class="n">RectData</span>
+</pre></div>
+</div>
+<p>or you can import everything</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">boss.ui_creator</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+</div>
+<p>Even though <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">*</span></code> is discouraged but if you want to create a few different types of UI, you can use it.</p>
+<p>or you can import <code class="docutils literal notranslate"><span class="pre">UICreator</span></code></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">boss.ui_creator</span> <span class="kn">import</span> <span class="n">UICreator</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>UICreator is most import class to import</p>
+</div>
+</div>
+<div class="section" id="compatibility">
+<h2>Compatibility<a class="headerlink" href="#compatibility" title="Permalink to this headline">¶</a></h2>
+<p>TL;DR; <a class="reference internal" href="#conclusion-compability"><span class="std std-ref">Conclusion</span></a></p>
+<p>Since <em>boss</em> package is in early development and will be in continuous development, new features will be added and
+existing things may be improved. File, functions, classes will be deleted, moved and renamed, and the code you have
+written may break in future.</p>
+<p>For eg to create a Button there are around 40 parameters(at the moment) that can be set as you can see in following code:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">ui_elements</span><span class="p">(</span><span class="n">op</span><span class="p">):</span>
+   <span class="n">b</span> <span class="o">=</span><span class="n">Button</span><span class="p">(</span>
+       <span class="n">op</span><span class="p">,</span>
+       <span class="n">RectData</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">50</span><span class="p">),</span>
+       <span class="n">PanelData</span><span class="p">(</span>
+           <span class="n">text</span><span class="o">=</span><span class="s1">&#39;text&#39;</span><span class="p">,</span>
+           <span class="n">textData</span><span class="o">=</span><span class="n">TextData</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;Left&#39;</span><span class="p">,</span><span class="n">Color</span><span class="o">.</span><span class="n">BLACK</span><span class="p">),</span>
+           <span class="n">image_path</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+           <span class="n">toolTipText</span> <span class="o">=</span> <span class="s1">&#39;this is tool tip &#39;</span><span class="p">,</span>
+           <span class="n">parent</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+           <span class="n">normal_color</span><span class="o">=</span><span class="n">Color</span><span class="o">.</span><span class="n">RED</span><span class="p">,</span>
+           <span class="n">hover_color</span><span class="o">=</span><span class="n">Color</span><span class="o">.</span><span class="n">GREEN</span><span class="p">,</span>
+           <span class="n">geo_type</span> <span class="o">=</span> <span class="n">RectGeoData</span><span class="p">(</span><span class="s1">&#39;Rect&#39;</span><span class="p">,</span><span class="n">Color</span><span class="o">.</span><span class="n">RED</span><span class="p">,</span><span class="n">Color</span><span class="o">.</span><span class="n">GREEN</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="kc">None</span><span class="p">),</span>
+           <span class="n">toolTipImagePath</span><span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+           <span class="n">canDrag</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+           <span class="n">dragRect</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+           <span class="n">addToUI</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+           <span class="n">rectIsLocal</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+           <span class="n">clipRect</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+           <span class="n">name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+           <span class="n">panelType</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+           <span class="n">resizeToText</span><span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+           <span class="n">mesh_part</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+           <span class="n">after_create_fn</span><span class="o">=</span><span class="kc">None</span>
+       <span class="p">),</span>
+       <span class="n">buttonData</span> <span class="o">=</span> <span class="n">ButtonData</span><span class="p">(</span>
+           <span class="n">onClick</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+           <span class="n">onHover</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+           <span class="n">onMouseEnter</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+           <span class="n">onMouseExit</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+           <span class="n">onWheelUp</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+           <span class="n">onWheelDown</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+           <span class="n">onDragBegin</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+           <span class="n">onDrag</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+           <span class="n">onDragEnd</span> <span class="o">=</span> <span class="kc">None</span>
+   <span class="p">),</span>
+   <span class="n">param</span><span class="o">=</span><span class="kc">None</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>In future, some of these parameters will be moved and removed and new parameters will be added.</p>
+<p>In order to deal with it, I have written <a class="reference external" href="#uicreator-class">UICreator</a> class, which contains static methods that creates UI.</p>
+<p>for eg, this is static method <code class="docutils literal notranslate"><span class="pre">floatField</span></code> that just creates and returns instance of <a class="reference internal" href="../ui/FloatField.html#floatfield-title"><span class="std std-ref">FloatField</span></a>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@staticmethod</span>
+<span class="k">def</span> <span class="nf">floatField</span><span class="p">(</span><span class="n">op</span><span class="p">:</span> <span class="n">Boss_OT_base_ui</span><span class="p">,</span>
+               <span class="n">rectData</span><span class="p">:</span> <span class="n">rectDataType</span><span class="p">,</span>
+               <span class="n">value</span><span class="p">:</span> <span class="n">fieldType</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+               <span class="n">onValueChange</span><span class="p">:</span> <span class="n">callbackType</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+               <span class="n">onTextChange</span><span class="p">:</span> <span class="n">callbackType</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+               <span class="n">onEnterPress</span><span class="p">:</span> <span class="n">callbackType</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+               <span class="n">ttt</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+               <span class="n">tti</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+               <span class="n">canDrag</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+               <span class="n">parent</span><span class="p">:</span> <span class="n">uiType</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+               <span class="n">rectIsLocal</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+               <span class="n">param</span><span class="o">=</span><span class="kc">None</span>
+               <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">FloatField</span><span class="p">:</span>
+
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">FieldValue</span><span class="p">):</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">value</span>
+        <span class="n">minValue</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">min</span>
+        <span class="n">maxValue</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">max</span>
+        <span class="n">changeBy</span> <span class="o">=</span> <span class="n">value</span><span class="o">.</span><span class="n">changeBy</span> <span class="k">if</span> <span class="n">value</span><span class="o">.</span><span class="n">changeBy</span> <span class="k">else</span> <span class="o">.</span><span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="n">value</span>
+        <span class="n">minValue</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">maxValue</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="n">changeBy</span> <span class="o">=</span> <span class="o">.</span><span class="mi">1</span>
+
+    <span class="k">return</span> <span class="n">FloatField</span><span class="p">(</span><span class="n">op</span><span class="p">,</span> <span class="n">rectData</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">rectData</span><span class="p">,</span> <span class="n">RectData</span><span class="p">)</span> <span class="k">else</span> <span class="n">RectData</span><span class="p">(</span><span class="o">*</span><span class="n">rectData</span><span class="p">),</span>
+                      <span class="n">panelData</span><span class="o">=</span><span class="n">PanelData</span><span class="p">(</span><span class="n">toolTipText</span><span class="o">=</span><span class="n">ttt</span><span class="p">,</span> <span class="n">toolTipImagePath</span><span class="o">=</span><span class="n">tti</span><span class="p">,</span> <span class="n">canDrag</span><span class="o">=</span><span class="n">canDrag</span><span class="p">,</span>
+                                          <span class="n">parent</span><span class="o">=</span><span class="n">parent</span><span class="p">,</span> <span class="n">rectIsLocal</span><span class="o">=</span><span class="n">rectIsLocal</span><span class="p">),</span>
+                      <span class="n">value</span><span class="o">=</span><span class="n">val</span><span class="p">,</span>
+                      <span class="n">minValue</span><span class="o">=</span><span class="n">minValue</span><span class="p">,</span>
+                      <span class="n">maxValue</span><span class="o">=</span><span class="n">maxValue</span><span class="p">,</span>
+                      <span class="n">changeBy</span><span class="o">=</span><span class="n">changeBy</span><span class="p">,</span>
+                      <span class="n">onTextChange</span><span class="o">=</span><span class="n">onTextChange</span><span class="p">,</span>
+                      <span class="n">onValueChange</span><span class="o">=</span><span class="n">onValueChange</span><span class="p">,</span>
+                      <span class="n">onEnterPress</span><span class="o">=</span><span class="n">onEnterPress</span><span class="p">,</span>
+                      <span class="n">param</span><span class="o">=</span><span class="n">param</span>
+                      <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="conclusion">
+<span id="conclusion-compability"></span><h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Use <a class="reference external" href="#uicreator-class">UICreator</a>’s functions whenever possible. This is enough for all the basic tasks.</p></li>
+<li><p>If you don’t see things in UICreator, maybe its not final yet, eg. geometry classes, colors,images etc.</p></li>
+<li><p>Things that aren’t ready can still be used, but your code may require minor adjustment with future updates.</p></li>
+<li><p>If you are writing addon use everything and when writing boss scripts, use only <a class="reference external" href="#uicreator-class">UICreator</a></p></li>
+<li><p>eg. Instead of using <code class="docutils literal notranslate"><span class="pre">Button(op,RectData(0,0,10,10))</span></code> to create a Button use <code class="docutils literal notranslate"><span class="pre">UICreator.button(op,(0,0,10,10))</span></code></p></li>
+<li><p>In documentation, I will be using <code class="docutils literal notranslate"><span class="pre">UICreator</span></code> class.</p></li>
+</ul>
+</div>
+<div class="section" id="uicreator-class">
+<h2>UICreator (class)<a class="headerlink" href="#uicreator-class" title="Permalink to this headline">¶</a></h2>
+<p>UICreator is a class that contains all the functions in one place to create UI.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">bpy</span>
+<span class="kn">from</span> <span class="nn">boss.ui_creator</span> <span class="kn">import</span> <span class="n">UICreator</span>
+
+
+<span class="k">def</span> <span class="nf">ui_elements</span><span class="p">(</span><span class="n">op</span><span class="p">):</span>
+    <span class="c1"># Create Cube</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">UICreator</span><span class="o">.</span><span class="n">button</span><span class="p">(</span><span class="n">op</span><span class="p">,(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">50</span><span class="p">),</span><span class="s1">&#39;Cube&#39;</span><span class="p">,</span><span class="k">lambda</span> <span class="p">:</span><span class="n">bpy</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">primitive_cube_add</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>More functions will be added in this class as project grows.</p>
+<p>Currently, Other Functions are:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">UICreator</span><span class="o">.</span><span class="n">button</span><span class="p">(</span><span class="o">..</span><span class="p">)</span>
+<span class="n">UICreator</span><span class="o">.</span><span class="n">checkBox</span><span class="p">(</span><span class="o">..</span><span class="p">)</span>
+<span class="n">UICreator</span><span class="o">.</span><span class="n">textField</span><span class="p">(</span><span class="o">..</span><span class="p">)</span>
+<span class="n">UICreator</span><span class="o">.</span><span class="n">floatField</span><span class="p">(</span><span class="o">..</span><span class="p">)</span>
+<span class="n">UICreator</span><span class="o">.</span><span class="n">intField</span><span class="p">(</span><span class="o">..</span><span class="p">)</span>
+<span class="n">UICreator</span><span class="o">.</span><span class="n">vectorIntField</span><span class="p">(</span><span class="o">..</span><span class="p">)</span>
+<span class="n">UICreator</span><span class="o">.</span><span class="n">vectorFloatField</span><span class="p">(</span><span class="o">..</span><span class="p">)</span>
+<span class="n">UICreator</span><span class="o">.</span><span class="n">vectorBooleanField</span><span class="p">(</span><span class="o">..</span><span class="p">)</span>
+
+<span class="n">UICreator</span><span class="o">.</span><span class="n">rr</span><span class="p">(</span><span class="n">op</span><span class="p">)</span>
+<span class="n">UICreator</span><span class="o">.</span><span class="n">deleteAllUi</span><span class="p">(</span><span class="n">op</span><span class="p">)</span>
+<span class="n">UICreator</span><span class="o">.</span><span class="n">mouse_xy</span><span class="p">(</span><span class="n">op</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Check out <a class="reference external" href="https://bboss99.github.io/quick_run_docs/tuts/basics.html#tut-basics" title="(in Quick Run Docs)"><span class="xref std std-ref">Tutorial section in Quick Run Docs</span></a> to see practical examples.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ol class="arabic simple">
+<li><p>ColorField and DropDown are working and will be added soon in UICreator.</p></li>
+<li><p>Layout is there but will be removed.</p></li>
+</ol>
+</div>
+<div class="admonition-technical-detail admonition">
+<p class="admonition-title">technical detail</p>
+<p>In future more time saving functions will be written in this module and a lot of things
+(for eg. layout functionality, mesh-combining, some panel/button creation parameters) may be moved from boss
+package to this module.</p>
+<p>Even though performance is not an issue now, some classes may benefit from ctypes or cython. (for eg. RectData
+and Geo). Acceleration mechanism for cursor insided-ness, kd-tree, bvh-tree from mathutils package
+can be used when number of ui increases. All that can be written as a part of ui_creator.</p>
+</div>
+<p class="rubric">Notes</p>
+<ol class="arabic simple">
+<li><p><cite>ui_creator.py</cite>, since it’s not essential to <em>boss</em> , should be and can be placed outside of boss package.
+It can be part of the addon or you can <strong>write your own</strong> functions to simplify the process or avoid repetitions and typing.
+It can be part of utils in some extra folder in modules, (like there is blender’s bpy_extra and gpu_extra python modules).
+At the moment. It’s one file, but soon it will become multifile package.</p></li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="Launchers.html" class="btn btn-neutral float-right" title="Launchers (Quick Run)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="Installation.html" class="btn btn-neutral float-left" title="Download/Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, bboss99.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
